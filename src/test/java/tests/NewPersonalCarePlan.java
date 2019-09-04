@@ -79,6 +79,7 @@ public class NewPersonalCarePlan {
         carePlan.setSafetyNeedsNotesComments("No Problem");
         carePlan.setuTAComments("No Problem");
         carePlan.setDischargePlanNotesComments("No Problem");
+        carePlan.setPainSourceComment("Some string");
         page.carePlan(carePlan);
     }
 

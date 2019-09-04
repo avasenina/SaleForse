@@ -25,12 +25,12 @@ public class CarePlanCreateLoginPage {
         new TextField("Performed By Others Name",driver).typeText(carePlan.getPerformedByOthersName());
         new TextField("Light Housework Problem Managing Tips",driver).typeText(carePlan.getLightHouseworkProblemManagingTips());
         new TextField("Caregiver/Family Transports Name",driver).typeText(carePlan.getCaregiverFamilyTransportsName());
-        new TextField("Finances Performed By Others Nam",driver).typeText(carePlan.getFinancesPerformedByOthersNam());
+        new TextField("Finances Performed By Others Name",driver).typeText(carePlan.getFinancesPerformedByOthersNam());
         new TextField("Shopping Problem Managing Tips",driver).typeText(carePlan.getShoppingProblemManagingTips());
         new TextField("Equipment Used Other Tips",driver).typeText(carePlan.getEquipmentUsedOtherTips());
         new TextField("Pain Location Comment",driver).typeText(carePlan.getPainLocationComment());
         new TextField("Pain Source Comment",driver).typeText(carePlan.getPainSourceComment());
-        new TextField("Pain Triggerd By Comment",driver).typeText(carePlan.getPainTriggerdByComment());
+        new TextField("Pain Triggered By Comment",driver).typeText(carePlan.getPainTriggerdByComment());
         new TextField("Wound Care By",driver).typeText(carePlan.getWoundCareBy());
         new TextField("Other Treatments Name",driver).typeText(carePlan.getOtherTreatmentsName());
         new TextField("Injections By",driver).typeText(carePlan.getInjectionsBy());
