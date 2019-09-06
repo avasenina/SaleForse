@@ -16,7 +16,7 @@ public class TextArea {
         this.driver = driver;
         wait = new WebDriverWait(driver, 10);
         this.label = label;
-        area = driver.findElement(By.xpath("//span[text()='"+label+"')]/../..//following-sibling::textarea"));
+        area = driver.findElement(By.xpath("//span[text()='"+label+"']/../..//following-sibling::textarea"));
     }
 
     public TextArea typeText(String text) {
