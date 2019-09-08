@@ -29,6 +29,7 @@ public class NewPersonalCarePlan {
     @Test
     public void openSaleForce() {
       page = new CarePlanCreateLoginPage(driver);
+
         CarePlan carePlan = new CarePlan();
         carePlan.setHealthDirectiveOther("HelloWorld");
         carePlan.setLocation("HelloWorld");
