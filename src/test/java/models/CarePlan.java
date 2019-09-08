@@ -52,9 +52,6 @@ public class CarePlan {
     String uTAComments;
     String dischargePlanNotesComments;
 
-
-
-
     public String getHealthDirectiveOther() {
         return healthDirectiveOther;
     }

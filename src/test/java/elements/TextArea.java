@@ -26,4 +26,5 @@ public class TextArea {
         area.sendKeys(text);
         return this;
     }
+
 }

@@ -6,4 +6,5 @@
             <class name="tests.NewPersonalCarePlan"/>
         </classes>
     </test>
+
 </suite>
