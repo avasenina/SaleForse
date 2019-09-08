@@ -52,9 +52,6 @@ public class CarePlan {
     String uTAComments;
     String dischargePlanNotesComments;
 
-
-
-
     public String getHealthDirectiveOther() {
         return healthDirectiveOther;
     }
@@ -65,7 +62,6 @@ public class CarePlan {
 
     public String getLocation() {
         return location;
-
     }
     public void setLocation(String location) {
         this.location = location;

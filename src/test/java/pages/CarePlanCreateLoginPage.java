@@ -36,7 +36,6 @@ public class CarePlanCreateLoginPage {
         new TextField("Injections By",driver).typeText(carePlan.getInjectionsBy());
         new TextField("Other Equipment Name",driver).typeText(carePlan.getOtherEquipmentName());
         new TextField("Equipment Cared For By",driver).typeText(carePlan.getEquipmentCaredForBy());
-
         new TextArea("Cultural Considerations",driver).typeText(carePlan.getCulturalConsiderations());
         new TextArea("Caregiver and Consumer Strengths",driver).typeText(carePlan.getCaregiverandConsumerStrengths());
         new TextArea("Important Health/Medical Considerations",driver).typeText(carePlan.getImportantHealthMedicalConsiderations());
