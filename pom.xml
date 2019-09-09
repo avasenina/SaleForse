@@ -59,6 +59,5 @@
             <version>2.8.5</version>
             <scope>test</scope>
         </dependency>
-
     </dependencies>
 </project>

@@ -13,6 +13,7 @@ public class NewPersonalCarePlan {
     private ChromeDriver driver;
     CarePlanCreateLoginPage page;
 
+
     @BeforeClass
     public void openDriver() {
         System.setProperty("webdriver.chrome.driver", "src/resources/webdrivers/chromedriver.exe");
