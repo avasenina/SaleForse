@@ -1,5 +1,7 @@
 package tests;
 
+import lombok.Data;
+import lombok.extern.log4j.Log4j2;
 import models.CarePlan;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -9,6 +11,8 @@ import org.testng.annotations.Test;
 import pages.CarePlanCreateLoginPage;
 import java.util.concurrent.TimeUnit;
 
+@Log4j2
+@Data
 public class NewPersonalCarePlan {
     private ChromeDriver driver;
     CarePlanCreateLoginPage page;
@@ -29,57 +33,62 @@ public class NewPersonalCarePlan {
     public void openSaleForce() {
       page = new CarePlanCreateLoginPage(driver);
 
-        CarePlan carePlan = new CarePlan();
-        carePlan.setHealthDirectiveOther("HelloWorld");
-        carePlan.setLocation("HelloWorld");
-        carePlan.setToiletScheduleDescription("HelloWorld");
-        carePlan.setBathShowerAssistProvidedByName("HelloWorld");
-        carePlan.setPreparingMealsProblemManagingTips("HelloWorld");
-        carePlan.setPerformedByOthersName("HelloWorld");
-        carePlan.setLightHouseworkProblemManagingTips("HelloWorld");
-        carePlan.setCaregiverFamilyTransportsName("HelloWorld");
-        carePlan.setFinancesPerformedByOthersNam("HelloWorld");
-        carePlan.setShoppingProblemManagingTips("HelloWorld");
-        carePlan.setEquipmentUsedOtherTips("HelloWorld");
-        carePlan.setPainLocationComment("HelloWorld");
-        carePlan.setPainLocationComment("HelloWorld");
-        carePlan.setPainTriggerdByComment("HelloWorld");
-        carePlan.setWoundCareBy("HelloWorld");
-        carePlan.setOtherTreatmentsName("HelloWorld");
-        carePlan.setInjectionsBy("HelloWorld");
-        carePlan.setOtherEquipmentName("HelloWorld");
-        carePlan.setEquipmentCaredForBy("HelloWorld");
-        carePlan.setCulturalConsiderations("No Problem");
-        carePlan.setCaregiverandConsumerStrengths("No Problem");
-        carePlan.setImportantHealthMedicalConsiderations("No Problem");
-        carePlan.setHealthDirectiveComments("No Problem");
-        carePlan.setBedPositioningComments("No Problem");
-        carePlan.setMovingTransferringComments("No Problem");
-        carePlan.setWalkingAmbulationComments("No Problem");
-        carePlan.setGettingDressedComments("No Problem");
-        carePlan.setEatingDrinkingComments("No Problem");
-        carePlan.setToiletUseComments("No Problem");
-        carePlan.setBathingShoweringComments("No Problem");
-        carePlan.setBrushingProblemManagementTips("No Problem");
-        carePlan.setBrushingComments("No Problem");
-        carePlan.setPreparingMealsComments("No Problem");
-        carePlan.setLightHouseworkComments("No Problem");
-        carePlan.setTransportationComments("No Problem");
-        carePlan.setFinancesComments("No Problem");
-        carePlan.setPhoneUseComments("No Problem");
-        carePlan.setShoppingComments("No Problem");
-        carePlan.setEquipmentUsedTipsForManagingComment("No Problem");
-        carePlan.setMedicationPrepOrganizationComments("No Problem");
-        carePlan.setVisionComments("No Problem");
-        carePlan.setHearingComments("No Problem");
-        carePlan.setCommunicationComments("No Problem");
-        carePlan.setPainComment("No Problem");
-        carePlan.setTreatmentNotesComments("No Problem");
-        carePlan.setEquipmentManagementNotesComments("No Problem");
-        carePlan.setSafetyNeedsNotesComments("No Problem");
-        carePlan.setuTAComments("No Problem");
-        carePlan.setDischargePlanNotesComments("No Problem");
-        carePlan.setPainSourceComment("Some string");
+        CarePlan carePlan = CarePlan.builder()
+                .healthDirectiveOther("HelloWorld")
+                .location("HelloWorld")
+                .toiletScheduleDescription("HelloWorld")
+                .bathingShoweringComments("HelloWorld")
+                .preparingMealsProblemManagingTips("HelloWorld")
+                .performedByOthersName("HelloWorld")
+                .lightHouseworkProblemManagingTips("HelloWorld")
+                .caregiverFamilyTransportsName("HelloWorld")
+                .financesPerformedByOthersNam("HelloWorld")
+                .shoppingProblemManagingTips("HelloWorld")
+                .equipmentUsedOtherTips("HelloWorld")
+                .painLocationComment("HelloWorld")
+                .painTriggerdByComment("HelloWorld")
+                .woundCareBy("HelloWorld")
+                .otherTreatmentsName("HelloWorld")
+                .injectionsBy("HelloWorld")
+                .otherEquipmentName("HelloWorld")
+                .equipmentCaredForBy("HelloWorld")
+                .culturalConsiderations("No Problem")
+                .caregiverandConsumerStrengths("No Problem")
+                .importantHealthMedicalConsiderations("No Problem")
+                .healthDirectiveComments("No Problem")
+                .bedPositioningComments("No Problem")
+                .movingTransferringComments("No Problem")
+                .walkingAmbulationComments("No Problem")
+                .gettingDressedComments("No Problem")
+                .eatingDrinkingComments("No Problem")
+                .toiletUseComments("No Problem")
+                .bathingShoweringComments("No Problem")
+                .brushingProblemManagementTips("No Problem")
+                .brushingComments("No Problem")
+                .preparingMealsComments("No Problem")
+                .lightHouseworkComments("No Problem")
+                .transportationComments("No Problem")
+                .financesComments("No Problem")
+                .phoneUseComments("No Problem")
+                .shoppingComments("No Problem")
+                .equipmentUsedTipsForManagingComment("No Problem")
+                .medicationPrepOrganizationComments("No Problem")
+                .visionComments("No Problem")
+                .hearingComments("No Problem")
+                .communicationComments("No Problem")
+                .painComment("No Problem")
+                .treatmentNotesComments("No Problem")
+                .equipmentManagementNotesComments("No Problem")
+                .safetyNeedsNotesComments("No Problem")
+                .uTAComments("No Problem")
+                .dischargePlanNotesComments("No Problem")
+                .painSourceComment("No Problem")
+                .build();
+
+        log.error(carePlan);
+        log.info("Запускаю тест");
+        log.warn("Something went wrong");
+      
         page.carePlan(carePlan);
     }
 

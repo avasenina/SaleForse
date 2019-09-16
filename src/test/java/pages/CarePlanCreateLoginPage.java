@@ -2,10 +2,12 @@ package pages;
 
 import elements.TextArea;
 import elements.TextField;
+import lombok.extern.log4j.Log4j2;
 import models.CarePlan;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+@Log4j2
 public class CarePlanCreateLoginPage {
 
     WebDriver driver;
@@ -14,6 +16,7 @@ public class CarePlanCreateLoginPage {
     public CarePlanCreateLoginPage(WebDriver driver) {
         this.driver = driver;
         wait = new WebDriverWait(driver,10);
+        log.info("Я ");
     }
 
     public void carePlan(CarePlan carePlan) {
@@ -64,7 +67,7 @@ public class CarePlanCreateLoginPage {
         new TextArea("Treatment Notes/Comments",driver).typeText(carePlan.getTreatmentNotesComments());
         new TextArea("Equipment Management Notes/Comments",driver).typeText(carePlan.getEquipmentManagementNotesComments());
         new TextArea("Safety Needs Notes/Comments",driver).typeText(carePlan.getSafetyNeedsNotesComments());
-        new TextArea("UTA Comments",driver).typeText(carePlan.getuTAComments());
+        new TextArea("UTA Comments",driver).typeText(carePlan.getUTAComments());
         new TextArea("Discharge Plan Notes/Comments",driver).typeText(carePlan.getDischargePlanNotesComments());
     }
 }

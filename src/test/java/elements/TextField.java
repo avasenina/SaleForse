@@ -1,12 +1,13 @@
 package elements;
 
+import lombok.extern.log4j.Log4j2;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-
+@Log4j2
 public class TextField {
     WebElement element;
     WebDriver driver;
@@ -22,11 +23,11 @@ public class TextField {
     }
 
     public TextField typeText(String text) {
+        log.info("Поиск и рписание Текст-филдов");
         element.clear();
         wait.until(ExpectedConditions.visibilityOf(element));
-        System.out.println(String.format("Waiting text '%s' into Input '%s'", text, label));
+        log.info("Ожидание появление введенного текста");
         element.sendKeys(text);
         return this;
     }
-
 }
